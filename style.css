@@ -1,0 +1,307 @@
+:root {
+    /* --- Paleta principal Bosque Escuela --- */
+
+    /* Fondo y neutrales */
+    --color-bg-main: #FAE7C6;           /* Beige claro para fondo general */
+    --color-bg-card: #cfd5a6;           /* Verde claro suave para tarjetas */
+    --color-bg-alt: #fef9f4;            /* Fondo alterno (blanco) */
+
+    /* Tonos de verde naturales */
+    --color-forest-dark: #38592C;       /* Verde bosque profundo (para encabezados) */
+    --color-forest-mid: #2C7162;        /* Verde tranquilo / secundario */
+
+    /* Acentos y detalles */
+    --color-accent-earth: #DDA86C;      /* Acento terroso para botones/iconos */
+    --color-accent-light: #F6E8D0;      /* Acento suave (variación clara) */
+
+    /* Texto */
+    --color-text-dark: #1B1B1B;         /* Texto principal oscuro */
+    --color-text-light: #eaeec4;        /* Texto sobre fondos oscuros */
+    --color-text-muted: #555555;        /* Texto secundario */
+
+    /* Borde / sombras */
+    --color-border-light: rgba(0, 0, 0, 0.1);
+
+    /* Transiciones */
+    --transition-fast: 0.2s ease-in-out;
+
+    /* Color header */
+    --color-header-bg: #2c71624f;
+
+    /* Tamaño header */
+    --header-height: 4.5rem;
+}
+
+body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+
+.header {
+    width: 100dvw;
+    position: fixed;
+    background-color: var(--color-header-bg);
+    backdrop-filter: blur(25px);
+    box-shadow: 15px 0 30px rgba(32, 80, 54, 0.592);
+    z-index: 30;
+    height: var(--header-height);
+}
+
+.menu_header {
+    display: flex;
+    position: fixed;
+    top: var(--header-height);
+    width: 100dvw;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    background-color: var(--color-header-bg);
+    backdrop-filter: blur(17px);
+    z-index: 25;
+    animation-name: aparecer;
+    animation-timeline: --menu;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 75%;
+}
+
+#seccion_intro {
+    padding-top: 2.8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    color: var(--color-forest-dark);
+    text-align: center;
+}
+
+#titulo_principal {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+#titulo_secundario {
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
+}
+
+/* TEXTO BASICO */
+
+#descripcion {
+    color: var(--color-bg-alt);
+    font-size: clamp(1rem, 1.7vw, 1.4rem);
+    padding: 2rem;
+    max-width: 1050px;
+    z-index: 3;
+}
+
+#imagen_presentacion {
+    z-index: -5;
+    object-fit: cover;
+    padding-top: calc(var(--header-height) + 0.7rem);
+    margin: 0;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/WhatsApp\ Image\ 2025-12-09\ at\ 10.00.04\ AM.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(50px);
+}
+/* MENU */
+
+.menu {
+    view-timeline: --menu block;
+    display: flex;
+    top: --header-height; 
+    width: 100dvw;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    background-color: var(--color-bg-card);
+    /* view-timeline: --menu block;  */
+    animation-name: desaparecer;
+    animation-timeline: view();
+    animation-range-start: cover 75%;
+    animation-range-end: cover 90%;
+}
+
+
+.menu_item {
+    margin: 0.5rem 1rem;
+    background-color: var(--color-accent-earth);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.menu_item:hover {
+    background-color: var(--color-forest-mid);
+    transition: var(--transition-fast);
+    transform: scale(1.05);
+}
+
+/* ////////////////////////////////////////////// */
+
+/* CONTENEDORES */
+
+.contenedor { 
+    width: 100dvw;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.3rem 0;
+}
+
+/* TARJETAS */
+
+.tarjeta { 
+    display: flex;
+    background-color: var(--color-bg-card);
+    width: clamp(300px, 80dvw, 600px);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.5rem;
+    aspect-ratio: 1/0.7;
+}
+
+.info {
+    width: 50%;
+    padding: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.7rem);
+    color: var(--color-forest-dark);
+}
+
+.info h2 {
+    margin: 0.5rem 0;
+    font-size: clamp(1.5rem, 2.4vw, 1.4rem);
+}
+
+.info h3 {
+    margin: 0.4rem 0;
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+}
+
+.info p {
+    margin: 0.1rem 0;
+    color: var(--color-text-dark);
+}
+
+.imagen {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INFO DE LA TARJETA */
+
+.nombre_arbol {
+    text-align: center;
+}
+
+.nombres {
+    font-style: italic;
+    /* text-align: center; */
+    color: var(--color-text-muted);
+    margin-bottom: 0.8rem;
+}
+
+/* ANIMACIONES */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+}
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .tarjeta {
+        flex-direction: column-reverse;
+        max-height: none;
+        aspect-ratio: auto;
+        width: 95%;
+    }
+
+    .contenedor {
+        padding: 0.2rem;
+        width: 100dvw;
+    }
+
+    .info, .imagen {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagen {
+        height: 35%;
+        max-height: 350px;
+    }
+
+    .info {
+        padding: 0.5rem;
+    }
+}
+
+/* PC */
+@media (min-width: 990px) {
+    .tarjeta {
+        width: 100%;
+        margin: 0;
+        max-height: none;
+    }
+
+    .contenedor {
+        width:95dvw;
+        max-width: 1245px;
+        background-color: var(--color-bg-alt);
+        border-radius: 20px;
+        display: grid;
+        padding: 0.8rem;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+    }
+}
