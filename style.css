@@ -121,15 +121,22 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: auto;
-    background-color: var(--color-bg-card);
     z-index: 20;
     background-color: var(--color-header-bg);
     backdrop-filter: blur(17px);
+    height: 3.2rem;
+    
 }
 
 
+.menu ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
 .menu_item {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0.6rem;
     background-color: var(--color-accent-earth);
     padding: 0.4rem 1rem;
     border-radius: 5px;
@@ -138,6 +145,7 @@ body {
 
 a {
     text-decoration: none;
+    padding: 0;
     color: var(--color-text-light);
 }
 
@@ -294,7 +302,7 @@ img {
         width: 100dvw;
     }
 
-    .info, .imagen {
+    .imagen {
         width: 100%;
     }
 
@@ -305,6 +313,11 @@ img {
 
     .info {
         padding: 0.7rem;
+        width: 95%;
+    }
+
+    .menu {
+        justify-content: left;
     }
 }
 
