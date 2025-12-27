@@ -170,7 +170,7 @@ a {
     overflow: hidden;
     visibility: hidden;
     margin: 0.7rem;
-    aspect-ratio: 1/0.7;
+    /* aspect-ratio: 1/0.7; */
     scroll-margin-top: var(--header-heigth-total);
     animation-name: aparecer-desaparecer;
     animation-timeline: view();
@@ -182,7 +182,8 @@ a {
 
 .info {
     width: 50%;
-    padding: 1rem;
+    padding: 1.5rem;
+    margin: 10px;
     font-size: clamp(0.8rem, 1.5vw, 0.7rem);
     color: var(--color-forest-dark);
 }
@@ -197,14 +198,18 @@ a {
     font-size: clamp(1rem, 1.3vw, 1.1rem);
 }
 
-.info p {
-    margin: 0.1rem 0;
+.info p,li {
+    margin: 0.1rem 1rem;
     color: var(--color-text-dark);
+}
+
+.info span {
+    font-weight: bold;
+    color: var(--color-forest-dark);
 }
 
 .imagen {
     width: 50%;
-    height: 100%;
     overflow: hidden;
 }
 
@@ -281,8 +286,6 @@ img {
 @media (max-width: 600px) {
     .tarjeta {
         flex-direction: column-reverse;
-        max-height: none;
-        aspect-ratio: auto;
         width: 95%;
     }
 
@@ -293,7 +296,6 @@ img {
 
     .info, .imagen {
         width: 100%;
-        height: auto;
     }
 
     .imagen {
@@ -302,7 +304,7 @@ img {
     }
 
     .info {
-        padding: 0.5rem;
+        padding: 0.7rem;
     }
 }
 
@@ -310,19 +312,22 @@ img {
 @media (min-width: 990px) {
     .tarjeta {
         width: 100%;
-        margin: 0;
+        margin: 20px;
         max-height: none;
+        animation-name: aparecer-desaparecer;
+        animation-timing-function: view();
+        animation-range-start: cover 0%;
+        animation-range-end: cover 130%;
     }
 
     .contenedor {
         width:95dvw;
-        max-width: 1245px;
-        background-color: var(--color-bg-alt);
+        max-width: 1037px;
         border-radius: 20px;
-        display: grid;
-        padding: 0.8rem;
-        gap: 1rem;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        padding: 1.5rem;
+        flex-direction:clumn;
+        justify-content: center;
         overflow: hidden;
     }
 }
