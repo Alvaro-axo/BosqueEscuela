@@ -47,7 +47,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     overflow-x: hidden;
 }
 
@@ -63,17 +62,6 @@ body {
     height: var(--header-height);
 }
 
-#seccion_intro {
-    padding-top: 2.8rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    animation-name: desaparecer;
-    animation-timeline: view();
-    animation-range-end: cover 0%;
-    animation-range-start: cover 95%;
-}
-
 .titulo {
     color: var(--color-forest-dark);
     text-align: center;
@@ -81,6 +69,7 @@ body {
 
 #titulo_principal {
     font-size: clamp(2rem, 5vw, 4.5rem);
+    color: vaR(--color-bg-card);
 }
 
 #titulo_secundario {
@@ -99,10 +88,9 @@ body {
 
 #imagen_presentacion {
     z-index: -5;
-    object-fit: cover;
-    padding-top: calc(var(--header-height) + 0.7rem);
+    padding-top: calc(var(--header-height));
     margin: 0;
-    width: 100dvw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,6 +98,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(50px);
+}
+
+#imagen_presentacion div {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /* MENU */
 
@@ -121,6 +119,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: auto;
+    overflow-y: hidden;
     z-index: 20;
     background-color: var(--color-header-bg);
     backdrop-filter: blur(17px);
@@ -165,6 +164,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0.3rem 0;
 }
 
@@ -294,7 +294,7 @@ img {
 @media (max-width: 600px) {
     .tarjeta {
         flex-direction: column-reverse;
-        width: 95%;
+        width: 90%;
     }
 
     .contenedor {
@@ -327,19 +327,14 @@ img {
         width: 100%;
         margin: 20px;
         max-height: none;
-        animation-name: aparecer-desaparecer;
-        animation-timing-function: view();
-        animation-range-start: cover 0%;
-        animation-range-end: cover 130%;
     }
 
     .contenedor {
-        width:95dvw;
-        max-width: 1037px;
-        border-radius: 20px;
         display: flex;
+        width: 95dvw;
+        max-width: 1037px;
         padding: 1.5rem;
-        flex-direction:clumn;
+        flex-direction: column;
         justify-content: center;
         overflow: hidden;
     }
