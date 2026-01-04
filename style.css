@@ -4,7 +4,7 @@
     /* Fondo y neutrales */
     --color-bg-main: #FAE7C6;           /* Beige claro para fondo general */
     --color-bg-card: #cfd5a6;           /* Verde claro suave para tarjetas */
-    --color-bg-alt: #fef9f4;            /* Fondo alterno (blanco) */
+    --color-bg-alt: #f9f5e2;            /* Fondo alterno (blanco) */
 
     /* Tonos de verde naturales */
     --color-forest-dark: #38592C;       /* Verde bosque profundo (para encabezados) */
@@ -12,22 +12,21 @@
 
     /* Acentos y detalles */
     --color-accent-earth: #DDA86C;      /* Acento terroso para botones/iconos */
-    --color-accent-light: #F6E8D0;      /* Acento suave (variación clara) */
 
     /* Texto */
+    
     --color-text-dark: #1B1B1B;         /* Texto principal oscuro */
-    --color-text-light: #eaeec4;        /* Texto sobre fondos oscuros */
+    --color-text-light: #373B2E;        /* Texto sobre fondos oscuros */
     --color-text-muted: #555555;        /* Texto secundario */
 
     /* Borde / sombras */
-    --color-border-light: rgba(0, 0, 0, 0.1);
     --color-sombra: rgba(0, 0, 0, 0.2);
 
     /* Transiciones */
     --transition-fast: 0.2s ease-in-out;
 
     /* Color header */
-    --color-header-bg: #2c71624f;
+    --color-header-bg: #2e8d5f59;
 
     /* Tamaño header */
     --header-height: 4.2rem;
@@ -199,7 +198,7 @@ a {
     width: 50%;
     padding: 1.5rem;
     margin: 10px;
-    font-size: clamp(0.8rem, 1.5vw, 0.7rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     color: var(--color-forest-dark);
 }
 
