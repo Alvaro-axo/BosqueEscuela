@@ -4,7 +4,7 @@
     /* Fondo y neutrales */
     --color-bg-main: #FAE7C6;           /* Beige claro para fondo general */
     --color-bg-card: #cfd5a6;           /* Verde claro suave para tarjetas */
-    --color-bg-alt: #f9f5e2;            /* Fondo alterno (blanco) */
+    --color-bg-alt: #f4f8da;            /* Fondo alterno (blanco) */
 
     /* Tonos de verde naturales */
     --color-forest-dark: #38592C;       /* Verde bosque profundo (para encabezados) */
@@ -26,7 +26,7 @@
     --transition-fast: 0.2s ease-in-out;
 
     /* Color header */
-    --color-header-bg: #2e8d5f59;
+    --color-header-bg: #2e8d5fa5;
 
     /* Tamaño header */
     --header-height: 4.2rem;
@@ -68,7 +68,7 @@ body {
 }
 
 .titulo {
-    color: var(--color-forest-dark);
+    color: var(--color-bg-alt);
     text-align: center;
 }
 
@@ -80,6 +80,7 @@ body {
 
 #titulo_secundario {
     font-size: clamp(1.5rem, 4.5vw, 2rem);
+    color: var(--color-forest-dark);
 }
 
 /* TEXTO BASICO */
@@ -104,7 +105,6 @@ body {
     background-image: url(img/WhatsApp\ Image\ 2025-12-09\ at\ 10.00.04\ AM.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    backdrop-filter: blur(50px);
 }
 
 #imagen_presentacion div {
